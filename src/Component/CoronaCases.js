@@ -10,9 +10,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 import "react-bootstrap-table/dist/react-bootstrap-table-all.min.css";
 function CoronaCases(props) {
+  //table
   const options = {
     paginationPosition: "both"
   };
+  //
   return (
     <div>
       {/* {JSON.stringify(props)} */}

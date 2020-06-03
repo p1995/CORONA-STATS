@@ -10,6 +10,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 import "react-bootstrap-table/dist/react-bootstrap-table-all.min.css";
 function StateWiseCase(props) {
+  //table
+  const options = {
+    paginationPosition: "both"
+  };
+  //
+  //charts
   const data = {
     labels: _.pluck(props.cases, "state"),
     datasets: [
@@ -73,7 +79,7 @@ function StateWiseCase(props) {
     ]
   };
   const chartOptions = { maintainAspectRatio: false };
-
+  //
   return (
     <div>
       <Row>
@@ -93,6 +99,30 @@ function StateWiseCase(props) {
         <Col md={4}>
           {" "}
           <Bar data={data} height={500} width={700} options={chartOptions} />
+        </Col>
+      </Row>
+      <Row>
+        <Col md={12}>
+          <BootstrapTable data={props.cases} keyField="state">
+            <TableHeaderColumn dataField="state">State</TableHeaderColumn>
+            <TableHeaderColumn dataField="active">Active</TableHeaderColumn>
+            <TableHeaderColumn dataField="confirmed">
+              Confirmed
+            </TableHeaderColumn>
+            <TableHeaderColumn dataField="deaths">Deaths</TableHeaderColumn>
+            <TableHeaderColumn dataField="recovered">
+              Recovered
+            </TableHeaderColumn>
+            <TableHeaderColumn dataField="deltaconfirmed">
+              Delta confirmed
+            </TableHeaderColumn>
+            <TableHeaderColumn dataField="deltadeaths">
+              Delta Deaths
+            </TableHeaderColumn>
+            <TableHeaderColumn dataField="deltarecovered">
+              Delta Recovered
+            </TableHeaderColumn>
+          </BootstrapTable>{" "}
         </Col>
       </Row>
     </div>
