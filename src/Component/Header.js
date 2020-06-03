@@ -11,13 +11,13 @@ function Header() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto justify-content-end">
           <Nav.Link>
-            <Link to="/">Home</Link>
+            <Link to="/CORONA-STATS/">Home</Link>
           </Nav.Link>
           <Nav.Link>
-            <Link to="/CoronaCases">Daily-Stats</Link>
+            <Link to="/CORONA-STATS/CoronaCases">Daily-Stats</Link>
           </Nav.Link>
           <Nav.Link>
-            <Link to="/StateWiseCases">State Cases</Link>
+            <Link to="/CORONA-STATS/StateWiseCases">State Cases</Link>
           </Nav.Link>
         </Nav>
         <Form inline>
