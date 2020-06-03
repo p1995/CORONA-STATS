@@ -1,7 +1,25 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Header() {
-  return <div></div>;
+  return (
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/StateWiseCases">StateWiseCases</Link>
+            </li>
+            {/* <li>
+              <Link to="/schedule">Schedule</Link>
+            </li> */}
+          </ul>
+        </nav>
+      </header>
+    </div>
+  );
 }
 
 export default Header;
