@@ -6,7 +6,7 @@ function Main() {
   return (
     <div>
       <Switch>
-        <Route path="/" component={CoronaCases} />
+        <Route exact path="/CoronaCases" component={CoronaCases} />
         <Route path="/StateWiseCases" component={StateWiseCase} />
       </Switch>
     </div>
