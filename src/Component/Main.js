@@ -7,9 +7,9 @@ function Main() {
   return (
     <div style={{ paddingTop: "80px" }}>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/CoronaCases" component={CoronaCases} />
-        <Route path="/StateWiseCases" component={StateWiseCase} />
+        <Route exact path="/CORONA-STATS/" component={Home} />
+        <Route exact path="/CORONA-STATS/CoronaCases" component={CoronaCases} />
+        <Route path="/CORONA-STATS/StateWiseCases" component={StateWiseCase} />
       </Switch>
     </div>
   );
